@@ -20,3 +20,15 @@ const yo = [
     url: "",
   }),
 ];
+// < menor que
+// > mayor que
+let persona = {
+  nombre: "antonio",
+  apellido: "lopez",
+  edad: 34,
+  isDeveloper: true,
+};
+for (let prop in persona) {
+  console.log(prop);
+  console.log(persona[prop]);
+}
