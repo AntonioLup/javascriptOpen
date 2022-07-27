@@ -48,5 +48,5 @@ console.log(estudiante.match("Lopez"));
 
 console.log(estudiante.slice(11, 12));
 console.log(estudiante.slice(19, 20));
-console.log(estudiante.trim());
+const estudianteSinEspacios = estudiante.replace(/ /g, "");
 console.log(estudiante.includes("Antonio"));
