@@ -1,9 +1,39 @@
-let altura = 172;
-let alturaM = 1.72;
-let kg = 95.6;
-let gk = 95.6;
-console.log(parseInt(altura));
-console.log(parseFloat(alturaM));
-console.log(Math.ceil(kg));
-console.log(Math.floor(kg));
-const sonIguales = Number.MAX_VALUE + 1 === Number.MAX_VALUE;
+let compra = ["leche", "carne", "huevos", "cereales", "nueces"];
+compra.push("Aceite de Girasol");
+console.log(compra);
+compra.pop();
+console.log(compra);
+// objeto
+const pelicula = [
+  (peli1 = {
+    tiulo: "El hombre de Toronto",
+    director: "Patrick Hughes",
+    fecha: 2009,
+  }),
+  (peli2 = {
+    tiulo: "Nobody",
+    director: "Ilya Naishuller",
+    fecha: 2021,
+  }),
+  (peli3 = {
+    tiulo: "Midsommar",
+    director: "Ari Aster",
+    fecha: 2019,
+  }),
+];
+pelicula.filter((e) => {
+  if (e.fecha > 2010) {
+    console.log(e);
+  }
+});
+const directore = pelicula.map((i) => {
+  console.log(i.director);
+  return i.director;
+});
+const titulos = pelicula.map((i) => {
+  console.log(i.tiulo);
+  return i.tiulo;
+});
+console.log(...directore, ...titulos);
+
+console.log(pelicula);
