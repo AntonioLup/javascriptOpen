@@ -6,3 +6,4 @@ console.log(parseInt(altura));
 console.log(parseFloat(alturaM));
 console.log(Math.ceil(kg));
 console.log(Math.floor(kg));
+const sonIguales = Number.MAX_VALUE + 1 === Number.MAX_VALUE;
