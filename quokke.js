@@ -1,33 +1,27 @@
 // llamar
-const winston = require("winston");
+// const moduleMath = require("./module.js");
 
-const logger = winston.createLogger({
-  level: "info",
-  format: winston.format.json(),
-  defaultMeta: { service: "user-service" },
-  transports: [
-    //
-    // - Write all logs with importance level of `error` or less to `error.log`
-    // - Write all logs with importance level of `info` or less to `combined.log`
-    //
-    new winston.transports.File({ filename: "error.log", level: "error" }),
-    new winston.transports.File({ filename: "combined.log" }),
-  ],
-});
+// const sumaFact = moduleMath.suma(5, 5);
 
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
-if (process.env.NODE_ENV !== "production") {
-  logger.add(
-    new winston.transports.Console({
-      format: winston.format.simple(),
-    })
-  );
-}
-try {
-  logger.info("ey que pasa");
-} catch (e) {
-  logger.error(e.message);
-}
+// const { suma } = require("./module.js");
+
+import { suma } from "./module.js";
+import multi from "./module.js";
+import chalk from "chalk";
+
+const sumaFact = suma(1, 2);
+const sumaFact2 = suma(4, 5);
+console.log(chalk.green(sumaFact));
+console.log(chalk.blue(sumaFact2));
+
+// import axios from "axios";
+// axios
+//   .get("https://pokeapi.co/api/v2/pokemon/ditto")
+//   .then(function (response) {
+//     // handle success
+//     console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   });
