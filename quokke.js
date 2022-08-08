@@ -1,14 +1,11 @@
-class Estudiante {
-  nombre = "Antonio";
-  asignaturas = ["Javascript", "HTML", "CSS"];
-
-  obtenerDatos() {
-    return {
-      nombre: this.nombre,
-      asignaturas: this.asignaturas,
-    };
+function Fibonacci(num) {
+  if (num === 1) return [1];
+  if (num === 2) return [1, 1];
+  let list = [1, 1];
+  for (let i = 2; i < num; i++) {
+    list.push(list[i - 1] + list[i - 2]);
   }
+  return list;
 }
 
-const estudiante = new Estudiante();
-console.log(estudiante.obtenerDatos());
+console.log(Fibonacci(6));
