@@ -5,7 +5,29 @@ h1 {
   margin: 0;
   color: aliceblue;
 }
-
+.seccion{
+  background-color: rgb(66, 129, 129);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+}
+.papelera{
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+  
+}
+.prrafo{
+  background-color: black;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.prrafo.drag{
+  opacity:0.3 ;
+}
+.prrafo:hover{
+  cursor: grab;
+}
 button{
   border: none;
   padding: 0.5rem 0.75rem;
